@@ -15,6 +15,7 @@ public class Story {
     public Story(){
         mUUID = UUID.randomUUID();
         //TODO: add a description to this method - Tony? In the crime
+        setDescription("This is a sample.");
         // app example this was the Date field.
     }
 

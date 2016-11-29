@@ -8,15 +8,15 @@ import java.util.UUID;
 
 //In Crime app this would be CrimeLab.java
 public class StorySingleton {
-    private static StorySingleton sStrorySingleton;
+    private static StorySingleton sStorySingleton;
 
     private List<Story> mStories;
 
     public static StorySingleton get(Context context){
-        if(sStrorySingleton == null){
-            sStrorySingleton = new StorySingleton(context);
+        if(sStorySingleton == null){
+            sStorySingleton = new StorySingleton(context);
         }
-        return sStrorySingleton;
+        return sStorySingleton;
     }
     private StorySingleton(Context context){
         mStories = new ArrayList<>();

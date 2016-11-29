@@ -1,4 +1,4 @@
-package com.example.marysilva.story;
+package com.example.team23.story;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+
+import com.example.marysilva.story.R;
 
 /**
  * Created by marysilva on 11/25/16.

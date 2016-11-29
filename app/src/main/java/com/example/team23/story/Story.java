@@ -1,4 +1,4 @@
-package com.example.marysilva.story;
+package com.example.team23.story;
 
 import java.util.UUID;
 

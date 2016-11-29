@@ -1,10 +1,12 @@
-package com.example.marysilva.story;
+package com.example.team23.story;
 
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+
+import com.example.marysilva.story.R;
 
 public abstract class SingleFragmentActivity extends FragmentActivity{
     protected abstract Fragment createFragment();

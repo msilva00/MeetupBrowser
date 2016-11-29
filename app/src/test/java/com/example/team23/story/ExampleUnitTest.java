@@ -1,4 +1,4 @@
-package team23.story;
+package com.example.team23.story;
 
 import org.junit.Test;
 

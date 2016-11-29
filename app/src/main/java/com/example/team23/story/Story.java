@@ -1,15 +1,16 @@
 package com.example.team23.story;
 
+import android.widget.ImageView;
+
 import java.util.UUID;
 
-/**
- * Created by marysilva on 11/25/16.
- */
+
 
 public class Story {
     private UUID mUUID;
     private String mName;
     private String mDescription;
+    private ImageView imageView;
     //TODO: A picture field ImageView should work - Worry about this later
 
     public Story(){

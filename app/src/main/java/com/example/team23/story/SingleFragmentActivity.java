@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
-import com.example.marysilva.story.R;
+import com.example.team23.story.R;
 
 public abstract class SingleFragmentActivity extends FragmentActivity{
     protected abstract Fragment createFragment();

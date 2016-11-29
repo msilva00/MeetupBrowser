@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 
-import com.example.marysilva.story.R;
+import com.example.team23.story.R;
 
 /**
  * Created by marysilva on 11/25/16.

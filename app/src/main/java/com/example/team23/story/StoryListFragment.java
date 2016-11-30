@@ -1,6 +1,7 @@
 package com.example.team23.story;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
@@ -76,7 +77,7 @@ public class StoryListFragment extends Fragment {
 
 
 
-  private class StoryHolder extends RecyclerView.ViewHolder {
+  private class StoryHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
       private TextView mTitleTextView;
       private TextView mDescription;
@@ -100,12 +101,11 @@ public class StoryListFragment extends Fragment {
           mDescription.setText(mStory.getDescription());
           //imageView.setImageResource(list.get(position).imageId);
       }
-/*
       @Override
       public void onClick(View v) {
-          Intent intent = new Intent(getActivity(), StoryAcivity.class);
+          Intent intent = StoryAcivity.newIntent(getActivity(), mStory.getId());
           startActivity(intent);
-      }*/
+      }
 
 
   }

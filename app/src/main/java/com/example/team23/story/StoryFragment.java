@@ -42,6 +42,7 @@ public class StoryFragment extends Fragment{
         View v = inflater.inflate(R.layout.fragment_story, container, false);
 
         mTitleField = (EditText) v.findViewById(R.id.story_title);
+        mTitleField.setText(mStory.getName());
         mTitleField.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

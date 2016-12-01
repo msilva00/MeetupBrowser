@@ -47,7 +47,7 @@ public class StoryListFragment extends Fragment {
                 Log.d("TAGG",newText);
 
                 StorySingleton storySingleton = StorySingleton.get(getContext());
-                //ArrayList<Story> searchStory = StorySingleton.searchStory(newText);
+
                 StoryAdapter storyAdapter = new StoryAdapter(storySingleton.searchStory(newText));
                 mRecyclerView.setAdapter(storyAdapter);
                 return true;

@@ -20,6 +20,7 @@ public class Story {
         // app example this was the Date field.
     }
 
+
     public UUID getId() {
         return mUUID;
     }

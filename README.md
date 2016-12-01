@@ -1,10 +1,11 @@
 #Project-1 Story Finder
 #### Team Number
-TODO - Add your team number here.(Look into Piazza for details)
+Team #23
+
 #### Team Members
-TODO - Add your team member names here.
+Jasmine Mann, Mary Silva, Tony Filippo
 #### Youtube video Link
-TODO - Add your team's unlisted youtube video link here.
+https://www.youtube.com/watch?v=0y1_D2OfR_o
 
 ## Problem statement:
 You will be building an app that displays a list of Cards based on a Search Query.

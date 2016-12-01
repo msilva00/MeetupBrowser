@@ -23,7 +23,7 @@ public class StorySingleton {
         for (int i = 0; i < 100; i++) {
             Story story = new Story();
             story.setName("Story #" + i);
-            //story.setDescription("Name, Description, etc. for Story #" + i);
+            story.setDescription("Name, Description, etc. for Story #" + i);
             mStories.add(story);
         }
     }
@@ -33,6 +33,8 @@ public class StorySingleton {
     }
 
     //TODO: Create a search widget - Tony?
+
+    //method for search through cards and finding the right match
 
     public Story getStory(UUID id){
         for(Story story: mStories){

@@ -14,13 +14,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StoryListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private StoryAdapter mAdapter;
-    private SearchView mSearchView;
+    private SearchView searchView;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,34 +33,8 @@ public class StoryListFragment extends Fragment {
                 .findViewById(R.id.story_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        mSearchView = (SearchView) view.findViewById(R.id.search_view);
-        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                StorySingleton storyLab = StorySingleton.get(getActivity());
-                List<Story> stories = storyLab.getStories();
-                for(int i = 0; i < stories.size(); i++){
-                    if(!stories.get(i).getName().toLowerCase().equals(s)){
-                        stories.remove(i);
-                    }
-                }
-                if (mAdapter == null) {
-                    mAdapter = new StoryAdapter(stories);
-                    mRecyclerView.setAdapter(mAdapter);
-                }
-                else {
-                    mAdapter.notifyDataSetChanged();
-                }
-                return true;
-            }
-            @Override
-            public boolean onQueryTextChange(String s) {
-                Log.d("TAGG",s);
 
-                return false;
-            }
-        });
-/*
+
         searchView = (SearchView) view.findViewById(R.id.search_view);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -69,11 +46,15 @@ public class StoryListFragment extends Fragment {
             public boolean onQueryTextChange(String newText) {
                 Log.d("TAGG",newText);
 
-                return false;
+                StorySingleton storySingleton = StorySingleton.get(getContext());
+                //ArrayList<Story> searchStory = StorySingleton.searchStory(newText);
+                StoryAdapter storyAdapter = new StoryAdapter(storySingleton.searchStory(newText));
+                mRecyclerView.setAdapter(storyAdapter);
+                return true;
             }
         });
 
-*/
+
         updateUI();
 
         return view;

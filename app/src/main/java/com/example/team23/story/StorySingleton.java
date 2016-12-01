@@ -3,6 +3,7 @@ package com.example.team23.story;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
@@ -34,7 +35,23 @@ public class StorySingleton {
 
     //TODO: Create a search widget - Tony?
 
+
     //method for search through cards and finding the right match
+    //array list
+    //iterator
+    //get what your searching for in a  variable
+    //make new adapter
+    //set recycle view to new adapter
+
+    public ArrayList<Story> searchStory(String s){
+        ArrayList<Story> searchList = new ArrayList<>();
+        for(int i = 0; i < mStories.size(); i++){
+            if(mStories.get(i).getName().contains(s)){
+                searchList.add(mStories.get(i));
+            }
+        }
+        return searchList;
+    }
 
     public Story getStory(UUID id){
         for(Story story: mStories){
